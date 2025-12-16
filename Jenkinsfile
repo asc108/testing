@@ -21,15 +21,9 @@ spec:
 
     stage('Build image (no push)') {
       steps {
-        container('kaniko') {
-          sh '''
-            /kaniko/executor \
-              --context=. \
-              --dockerfile=Dockerfile \
-              --no-push \
-              --tar-path=/workspace/image.tar
-          '''
-        }
+       container('kaniko') {
+     sh '/kaniko/executor --context=/workspace --dockerfile=/workspace/Dockerfile --no-push --tar-path=/workspace/image.tar'
+}
       }
     }
   }
