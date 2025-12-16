@@ -26,7 +26,7 @@ spec:
             /kaniko/executor \
               --context=. \
               --dockerfile=Dockerfile \
-              --no-push
+              --no-push \
               --tar-path=/workspace/image.tar
           '''
         }
