@@ -27,6 +27,7 @@ spec:
               --context=. \
               --dockerfile=Dockerfile \
               --no-push
+              --tar-path=/workspace/image.tar
           '''
         }
       }
